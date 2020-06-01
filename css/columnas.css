@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;
+    /* En la siguiente linea, especifico el tamaño y cantidad de columnas que deseo tener */
+    grid-template-columns: 200px 200px 200px; /* También podemos definir valores combinados entre unidades de medida (Px y %) */
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}

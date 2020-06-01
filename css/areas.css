@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.container{
+    height: 100vh;
+   display: grid;
+   grid-template: 100px 1fr 150px / 200px 1fr;
+   grid-gap: 10px;
+  /* Con la siguiente linea, podemos alterar el tamaño de un elemento con tal de que ocupe cierta cantidad de celdas. En este caso, el header y footer ocuparan 2 columnas */
+   grid-template-areas: "header header" 
+                        "left contenido"
+                        "footer footer";
+}
+
+.header{
+    grid-area: header;
+    background-color: gray;
+}
+
+.left{
+    grid-area: left;
+    background-color: orange;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: lightgreen;
+}

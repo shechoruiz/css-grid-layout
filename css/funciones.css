@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container{
+    display: grid;
+    /* Nueva unidad de medida: 1fr -> Divide equitativamente tanto alto como ancho del viewport */
+    /* grid-template: 300px 100px 100px / 1fr 1fr 1fr; */
+    /* Funcion repeat -> Si el valor de un propiedad se repite varias veces, podemos indicar con repeat la cantidad de veces a repetir y la medida que debe respetar */
+    /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
+    /* Adicional, hya una función llamada minmax que permitirá definir el valor minimo de una columna y a si mismo el valor maximo  */
+    grid-template: 300px 100px 100px / repeat(4, minmax(200px,1fr));
+}

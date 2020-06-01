@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container{
+    display: grid;
+    /* grid-template-columns: 20% 200px 20%; */
+    /* A la par de definir la cantidad de columnas, en la siguiente regla definimos la cantidad de filas a la que le asignaremos un tamaño. Si sobran filas, estas tendran un tamaño automatico de acuerdo al contenido (Implicito) */
+    /* grid-template-rows: 300px 300px; */
+
+    /* Adicional también se puede definir en una sola linea la combinación de columnas y filas */
+    grid-template: 300px 100px 100px / 50% 200px 100px; /* Pedirá en orden, 1ro las filas y luego las columnas */
+}

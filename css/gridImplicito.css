@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container{
+    height: 100vh;
+   display: grid;
+   grid-template-columns: [Inicio] 1fr [Linea2] 1fr [Linea3] 1fr [Linea4] 1fr [Linea5] 1fr [Linea6] 1fr [Linea7] 1fr [Final];
+   grid-template-rows: [Inicio] 200px [Linea2] 200px [Linea3] 100px [Linea4] 100px [Final];
+   grid-gap: 5px;
+   /* Con la siguiente regla, definimos como queremos que se comporten el resto de elementos que no cubren la disposición original de un grid. Por defecto, este valor esta en row, por lo que los elementos empezaran a renderizarse en orden de las filas. Si se pone column, se dibujaran en orden de columnas */
+   /* grid-auto-flow: column; */
+   grid-auto-flow: row;
+   /* Luego de definir el flujo de renderizado de elementos restantes, podemos definir cuanto ocuparan al dinujarse.
+   En este ejercicio, habian 6 divs originales y se añadieron 5 mas, por lo que esos 5 deben ser los que acaten la definición de su flujo */
+   /* grid-auto-columns: 200px 200px 200px 200px 200px; */
+   grid-auto-rows: 50px 200px;
+}
+
+.item:nth-of-type(1){
+    /* grid-column: 1 / -1;
+    grid-row: 1 / span 2; */
+    grid-column: Inicio / Final;
+    grid-row: Inicio / Linea3;
+}
+
+.item:nth-of-type(2){
+    /* grid-column: 1 / span 3;
+    grid-row: 3 / span 2; */
+    grid-column: Inicio / Linea4;
+    grid-row: Linea3 / Final;
+}
+
+.item:nth-of-type(3){
+    /* grid-column: 4 / span 2;
+    grid-row: 3 / span 2; */
+    grid-column: Linea4 / Linea6;
+    grid-row: Linea3 / Final;
+}
+
+.item:nth-of-type(4){
+    /* grid-column: 6 / span 2; */
+    grid-column: Linea6 / Final;
+}
+

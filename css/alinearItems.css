@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container{
+    height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   /* Con las siguientes reglas, podemos alinear las celdas */
+   justify-items: center; /* Orienta a nive horizontal */
+   align-items: center; /* Orienta a nivel vertical */
+}
+
+.item:nth-of-type(5){
+    align-self: start;
+    justify-self: start;
+}
+
+
